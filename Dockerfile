@@ -15,7 +15,7 @@ RUN cd /opt/ \
     && git clone https://github.com/apache/flink-shaded.git 
 
 ENV FLINK_RELEASE=release-1.10.0
-ENV FLINK_SHADED_VERSION=release-10.0
+ENV FLINK_SHADED_VERSION=release-9.0
 
 RUN cd /opt/flink &&  git checkout tags/${FLINK_RELEASE} \
     && cd /opt/flink-shaded &&  git checkout tags/${FLINK_SHADED_VERSION}

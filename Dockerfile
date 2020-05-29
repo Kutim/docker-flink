@@ -20,7 +20,7 @@ ENV FLINK_SHADED_VERSION=release-9.0
 RUN cd /opt/flink &&  git checkout tags/${FLINK_RELEASE} \
     && cd /opt/flink-shaded &&  git checkout tags/${FLINK_SHADED_VERSION}
 
-ENV HADOOP_VERSION=3.2.1
+ENV HADOOP_VERSION=2.9.2
 RUN cd /opt/flink-shaded \
     && mvn clean install -Dhadoop.version=${HADOOP_VERSION}
 

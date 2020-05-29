@@ -1,4 +1,4 @@
-FROM kutim/java:openjdk8
+FROM kutim/openjdk:8-stretch
 LABEL maintainer="1252900197@qq.com"
 
 ENV MAVEN_VERSION=3.6.3

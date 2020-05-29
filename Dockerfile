@@ -2,9 +2,7 @@ FROM kutim/openjdk:8-stretch
 LABEL maintainer="1252900197@qq.com"
 
 ENV MAVEN_VERSION=3.6.3
-RUN apt update \
-    && apt install -y wget \
-    && wget -O /opt/maven.tar.gz https://mirror.bit.edu.cn/apache/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
+RUN wget -O /opt/maven.tar.gz https://mirror.bit.edu.cn/apache/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
     && tar -zxf /opt/maven.tar.gz -C /opt/ \
     && mv /opt/apache-maven-${MAVEN_VERSION} /opt/maven \
     && rm -rf /opt/maven.tar.gz

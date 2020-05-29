@@ -25,6 +25,4 @@ RUN cd /opt/flink-shaded \
     && mvn clean install -Dhadoop.version=${HADOOP_VERSION}
 
 RUN cd /opt/flink \
-    && mvn clean install -DskipTests -Dfast
-
-
+    && mvn clean package -DskipTests -Dfast -Dhadoop.version=${HADOOP_VERSION}
